@@ -1,0 +1,14 @@
+data:
+  file_path: "data/raw/example_data.xlsx"
+  transaction_cost: 0.005
+  train_test_split: 0.7
+  
+feature_engineering:
+  lag_periods: [1, 2, 3, 4, 5]
+  polynomial_degree: 2
+  interaction_features: true
+  
+validation:
+  cv_folds: 5
+  test_size: 90  # days
+  embargo_days: 1

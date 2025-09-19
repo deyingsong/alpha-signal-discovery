@@ -1,0 +1,106 @@
+2025-09-10 18:43:56,587 - __main__ - INFO - Starting quantitative trading strategy pipeline
+2025-09-10 18:43:56,596 - __main__ - INFO - Loaded config files: ['data_configs', 'model_configs']
+2025-09-10 18:43:56,596 - __main__ - INFO - Step 1: Loading and preprocessing data
+2025-09-10 18:43:56,806 - src.data.loader - INFO - Loaded 1500 observations
+2025-09-10 18:43:56,806 - src.data.loader - INFO - Transaction cost: 0.005
+2025-09-10 18:43:56,818 - __main__ - INFO - Signal statistics:
+2025-09-10 18:43:56,818 - __main__ - INFO -          Mean       Std  Skewness    Kurtosis        Min        Max
+F1  -0.031302  3.494736 -5.558859  646.633106 -98.422952  84.176542
+F2  -0.016315  0.162042  3.047375   35.318262  -0.424477   2.035228
+F3   0.000233  0.146854  5.931265   50.670739  -0.108059   1.924243
+F4  -0.005739  0.087177 -1.579508   13.998145  -0.823486   0.222298
+F5   0.016302  0.125189  0.429492    4.489044  -0.498237   0.696391
+F6  -0.003332  1.018175  0.051208    3.271691  -3.816799   3.623302
+F7  -0.047401  0.327749  0.035801    3.208332  -0.900809   1.247010
+F8  -0.035629  0.143750  0.294503    3.188273  -0.391615   0.819321
+F9   0.009508  0.108902  1.619423   10.690217  -0.219284   0.930951
+F10 -0.043301  0.072333 -2.509676   25.732742  -0.849757   0.309440
+2025-09-10 18:43:56,827 - src.data.preprocessor - INFO - Aligned 1499 feature-target pairs
+2025-09-10 18:43:56,827 - __main__ - INFO - Step 2: Feature engineering
+2025-09-10 18:43:56,832 - src.data.feature_engineer - INFO - Created 50 lagged features
+2025-09-10 18:43:56,835 - src.data.feature_engineer - INFO - Created 45 interaction features
+2025-09-10 18:43:56,837 - src.data.feature_engineer - INFO - Created 10 polynomial features
+2025-09-10 18:43:56,838 - src.data.feature_engineer - INFO - Total engineered features: 115
+2025-09-10 18:43:56,838 - src.data.preprocessor - INFO - Training set: 1049 samples
+2025-09-10 18:43:56,838 - src.data.preprocessor - INFO - Test set: 450 samples
+2025-09-10 18:43:56,840 - src.data.feature_engineer - INFO - Fitted feature scaler on training data
+2025-09-10 18:43:56,841 - __main__ - INFO - Step 3: Model development and cross-validation
+2025-09-10 18:43:56,841 - __main__ - INFO - Training Ridge
+2025-09-10 18:43:58,307 - src.models.ridge_model - INFO - Best alpha: 1000.0
+2025-09-10 18:43:58,307 - src.models.ridge_model - INFO - Best CV score: -0.000041
+2025-09-10 18:43:58,309 - src.validation.time_series_cv - INFO - Fold 0: RMSE = 0.006221
+2025-09-10 18:43:58,366 - src.models.ridge_model - INFO - Best alpha: 100.0
+2025-09-10 18:43:58,366 - src.models.ridge_model - INFO - Best CV score: -0.000031
+2025-09-10 18:43:58,367 - src.validation.time_series_cv - INFO - Fold 1: RMSE = 0.005780
+2025-09-10 18:43:58,419 - src.models.ridge_model - INFO - Best alpha: 100.0
+2025-09-10 18:43:58,419 - src.models.ridge_model - INFO - Best CV score: -0.000034
+2025-09-10 18:43:58,420 - src.validation.time_series_cv - INFO - Fold 2: RMSE = 0.004236
+2025-09-10 18:43:58,474 - src.models.ridge_model - INFO - Best alpha: 100.0
+2025-09-10 18:43:58,474 - src.models.ridge_model - INFO - Best CV score: -0.000029
+2025-09-10 18:43:58,475 - src.validation.time_series_cv - INFO - Fold 3: RMSE = 0.005446
+2025-09-10 18:43:58,526 - src.models.ridge_model - INFO - Best alpha: 1000.0
+2025-09-10 18:43:58,526 - src.models.ridge_model - INFO - Best CV score: -0.000033
+2025-09-10 18:43:58,527 - src.validation.time_series_cv - INFO - Fold 4: RMSE = 0.005769
+2025-09-10 18:43:58,595 - src.models.ridge_model - INFO - Best alpha: 1000.0
+2025-09-10 18:43:58,595 - src.models.ridge_model - INFO - Best CV score: -0.000031
+2025-09-10 18:43:58,595 - __main__ - INFO - Training RandomForest
+2025-09-10 18:44:41,891 - src.models.random_forest - INFO - Best params: {'max_depth': 5, 'min_samples_split': 20, 'n_estimators': 300}
+2025-09-10 18:44:41,892 - src.models.random_forest - INFO - Best CV score: -0.000038
+2025-09-10 18:44:41,919 - src.validation.time_series_cv - INFO - Fold 0: RMSE = 0.006865
+2025-09-10 18:45:31,784 - src.models.random_forest - INFO - Best params: {'max_depth': 7, 'min_samples_split': 2, 'n_estimators': 200}
+2025-09-10 18:45:31,785 - src.models.random_forest - INFO - Best CV score: -0.000036
+2025-09-10 18:45:31,814 - src.validation.time_series_cv - INFO - Fold 1: RMSE = 0.005786
+2025-09-10 18:46:30,853 - src.models.random_forest - INFO - Best params: {'max_depth': 3, 'min_samples_split': 2, 'n_estimators': 500}
+2025-09-10 18:46:30,855 - src.models.random_forest - INFO - Best CV score: -0.000039
+2025-09-10 18:46:30,895 - src.validation.time_series_cv - INFO - Fold 2: RMSE = 0.005043
+2025-09-10 18:47:43,504 - src.models.random_forest - INFO - Best params: {'max_depth': 3, 'min_samples_split': 10, 'n_estimators': 200}
+2025-09-10 18:47:43,504 - src.models.random_forest - INFO - Best CV score: -0.000038
+2025-09-10 18:47:43,534 - src.validation.time_series_cv - INFO - Fold 3: RMSE = 0.005413
+2025-09-10 18:49:06,835 - src.models.random_forest - INFO - Best params: {'max_depth': 3, 'min_samples_split': 5, 'n_estimators': 100}
+2025-09-10 18:49:06,836 - src.models.random_forest - INFO - Best CV score: -0.000030
+2025-09-10 18:49:06,851 - src.validation.time_series_cv - INFO - Fold 4: RMSE = 0.005717
+2025-09-10 18:51:59,362 - src.models.random_forest - INFO - Best params: {'max_depth': 3, 'min_samples_split': 20, 'n_estimators': 100}
+2025-09-10 18:51:59,364 - src.models.random_forest - INFO - Best CV score: -0.000030
+2025-09-10 18:51:59,364 - __main__ - INFO - Training XGBoost
+2025-09-10 19:07:00,948 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 300, 'reg_alpha': 0, 'reg_lambda': 3.0}
+2025-09-10 19:07:00,949 - src.models.xgboost_model - INFO - Best CV score: -0.000040
+2025-09-10 19:07:00,960 - src.validation.time_series_cv - INFO - Fold 0: RMSE = 0.007725
+2025-09-10 19:25:30,910 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 100, 'reg_alpha': 0.01, 'reg_lambda': 0.5}
+2025-09-10 19:25:30,913 - src.models.xgboost_model - INFO - Best CV score: -0.000034
+2025-09-10 19:25:30,963 - src.validation.time_series_cv - INFO - Fold 1: RMSE = 0.005947
+2025-09-10 19:47:32,659 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0.01, 'reg_lambda': 0.5}
+2025-09-10 19:47:32,661 - src.models.xgboost_model - INFO - Best CV score: -0.000037
+2025-09-10 19:47:32,709 - src.validation.time_series_cv - INFO - Fold 2: RMSE = 0.004768
+2025-09-10 20:12:26,750 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 100, 'reg_alpha': 0.01, 'reg_lambda': 3.0}
+2025-09-10 20:12:26,752 - src.models.xgboost_model - INFO - Best CV score: -0.000035
+2025-09-10 20:12:26,801 - src.validation.time_series_cv - INFO - Fold 3: RMSE = 0.006407
+2025-09-10 20:40:03,754 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 0.5}
+2025-09-10 20:40:03,755 - src.models.xgboost_model - INFO - Best CV score: -0.000028
+2025-09-10 20:40:03,810 - src.validation.time_series_cv - INFO - Fold 4: RMSE = 0.005793
+2025-09-10 21:15:15,787 - src.models.xgboost_model - INFO - Best params: {'learning_rate': 0.01, 'max_depth': 2, 'n_estimators': 300, 'reg_alpha': 0, 'reg_lambda': 0.5}
+2025-09-10 21:15:15,799 - src.models.xgboost_model - INFO - Best CV score: -0.000030
+2025-09-10 21:15:15,799 - __main__ - INFO - Step 4: Model selection and predictions
+2025-09-10 21:15:15,800 - __main__ - INFO - Best model: Ridge
+2025-09-10 21:15:15,807 - __main__ - INFO - Step 5: Backtesting
+2025-09-10 21:15:15,811 - src.backtesting.engine - INFO - Optimal threshold: 0.0009
+2025-09-10 21:15:15,811 - src.backtesting.engine - INFO - Best Sharpe ratio: 1.868
+2025-09-10 21:15:15,818 - __main__ - INFO - Step 6: Results and reporting
+2025-09-10 21:15:15,818 - __main__ - INFO - Final Performance Metrics:
+2025-09-10 21:15:15,818 - __main__ - INFO - total_return: 0.3300
+2025-09-10 21:15:15,818 - __main__ - INFO - annualized_return: 0.1731
+2025-09-10 21:15:15,818 - __main__ - INFO - annualized_volatility: 0.0876
+2025-09-10 21:15:15,818 - __main__ - INFO - sharpe_ratio: 1.9777
+2025-09-10 21:15:15,818 - __main__ - INFO - sortino_ratio: 3.2760
+2025-09-10 21:15:15,818 - __main__ - INFO - max_drawdown: -0.0748
+2025-09-10 21:15:15,818 - __main__ - INFO - calmar_ratio: 2.3144
+2025-09-10 21:15:15,818 - __main__ - INFO - win_rate: 0.4356
+2025-09-10 21:15:15,818 - __main__ - INFO - avg_win: 0.0054
+2025-09-10 21:15:15,818 - __main__ - INFO - avg_loss: -0.0045
+2025-09-10 21:15:15,818 - __main__ - INFO - profit_factor: 1.3829
+2025-09-10 21:15:15,818 - __main__ - INFO - information_ratio: 1.9777
+2025-09-10 21:15:15,818 - __main__ - INFO - skewness: 0.1565
+2025-09-10 21:15:15,818 - __main__ - INFO - kurtosis: 0.5977
+2025-09-10 21:15:15,818 - __main__ - INFO - var_95: -0.0082
+2025-09-10 21:15:15,818 - __main__ - INFO - cvar_95: -0.0106
+2025-09-10 21:15:18,071 - __main__ - INFO - Pipeline completed successfully!
+
