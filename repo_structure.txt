@@ -1,0 +1,79 @@
+.
+├── README.md
+├── configs
+│   ├── data_configs.yml
+│   └── model_configs.yml
+├── data
+│   ├── processed
+│   │   ├── eda_summary.json
+│   │   ├── feature_importance.csv
+│   │   └── feature_sets.json
+│   ├── raw
+│   └── results
+│       ├── best_model_cv.json
+│       ├── cost_sensitivity.csv
+│       ├── model_comparison.csv
+│       ├── model_ranking_cv.csv
+│       └── performance_metrics.yaml
+├── logs
+│   └── pipeline.log
+├── models
+│   ├── feature_scaler.pkl
+│   ├── ffnn_model.pth
+│   ├── lightgbm_model.pkl
+│   ├── randomforest_model.pkl
+│   ├── ridge_model.pkl
+│   └── xgboost_model.pkl
+├── notebooks
+│   ├── 01_exploratory_data_analysis.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_development.ipynb
+│   ├── 04_cross_validation.ipynb
+│   ├── 05_backtesting.ipynb
+│   └── 06_final_analysis.ipynb
+├── repo_structure.txt
+├── reports
+├── requirements.txt
+├── scripts
+│   └── run_full_pipeline.py
+├── setup.py
+├── src
+│   ├── backtesting
+│   │   └── engine.py
+│   ├── data
+│   │   ├── feature_engineer.py
+│   │   ├── loader.py
+│   │   └── preprocessor.py
+│   ├── models
+│   │   ├── base_model.py
+│   │   ├── bayesian_optimization.py
+│   │   ├── ensemble_model.py
+│   │   ├── lightgbm_model.py
+│   │   ├── lstm_model.py
+│   │   ├── mlp_base_model.py
+│   │   ├── mlp_gpu_accelerated.py
+│   │   ├── mlp_model.py
+│   │   ├── random_forest.py
+│   │   ├── ridge_model.py
+│   │   ├── rnn_model.py
+│   │   ├── tiny_dl_model.py
+│   │   ├── transformer_model.py
+│   │   └── xgboost_model.py
+│   ├── utils
+│   │   └── performance_metric.py
+│   ├── validation
+│   │   ├── purged_cv.py
+│   │   └── time_series_cv.py
+│   └── visualization
+│       └── results_plots.py
+└── tests
+    ├── test_backtesting
+    │   └── test_engine.py
+    ├── test_data
+    │   └── test_loader.py
+    └── test_models
+        ├── dl_feasibility_analysis.py
+        ├── model_comparison.py
+        └── quick_model_timing.py
+
+22 directories, 55 files

@@ -64,17 +64,31 @@ python scripts/run_full_pipeline.py
 
 ```
 quantitative-trading-strategy/
-├── src/                    # Source code
-│   ├── data/              # Data processing modules
-│   ├── models/            # ML model implementations
-│   ├── validation/        # Cross-validation framework
-│   ├── backtesting/       # Backtesting engine
-│   └── visualization/     # Plotting and reporting
-├── configs/               # Configuration files
-├── scripts/               # Execution scripts
-├── notebooks/             # Jupyter notebooks for analysis
-├── tests/                 # Unit tests
-└── reports/               # Generated reports and figures
+├── README.md
+├── configs                # Configuration files
+├── data
+│   ├── processed
+│   ├── raw
+│   └── results
+├── logs                   # Experiment logs
+├── models                 # Saved models
+├── notebooks              # Jupyter notebooks for analysis
+├── repo_structure.txt
+├── reports
+├── requirements.txt
+├── scripts                # Execution scripts
+├── setup.py
+├── src                    # Source code
+│   ├── backtesting        # Backtesting engine
+│   ├── data               # Data processing modules
+│   ├── models             # Model implementation
+│   ├── utils              # Utility modules
+│   ├── validation         # Cross-validation framework
+│   └── visualization      # Plotting and reporting
+└── tests                  # Unit tests
+  ├── test_backtesting
+  ├── test_data
+  └── test_models
 ```
 
 
