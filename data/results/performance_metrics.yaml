@@ -1,0 +1,71 @@
+annualized_return: !!python/object/apply:numpy._core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  gBzYtHMjn78=
+annualized_volatility: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  Tb++POUzuD8=
+avg_loss: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  4EyWBtrgc78=
+avg_win: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  PVGdgCAedT8=
+calmar_ratio: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  cBhF2eg9w78=
+cvar_95: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  Q0zGrQxnib8=
+information_ratio: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  Rf3XNsqV1L8=
+kurtosis: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  WG4bYFsO4D8=
+max_drawdown: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  +agOJm/kyb8=
+profit_factor: 0.9556273275706999
+sharpe_ratio: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  Rf3XNsqV1L8=
+skewness: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  94lNv1RwrT8=
+sortino_ratio: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  elaX6S4/4b8=
+total_return: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  EKtjzCd4q78=
+var_95: !!python/object/apply:numpy._core.multiarray.scalar
+- *id001
+- !!binary |
+  wqrcEjdNgr8=
+win_rate: 0.43777777777777777
