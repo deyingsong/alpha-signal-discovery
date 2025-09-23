@@ -2,7 +2,7 @@
 
 A comprehensive Python framework for developing, validating, and backtesting quantitative trading strategies using machine learning techniques.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a systematic approach to quantitative trading strategy development, following industry best practices for:
 
@@ -12,7 +12,7 @@ This project implements a systematic approach to quantitative trading strategy d
 - **Backtesting**: Realistic simulation including transaction costs and slippage
 - **Risk Management**: Comprehensive performance and risk analytics
 
-## 📊 Key Features
+## Key Features
 
 ### Data Processing
 - Robust data loading and validation
@@ -34,7 +34,7 @@ This project implements a systematic approach to quantitative trading strategy d
 - Threshold optimization for signal filtering
 - Comprehensive performance analytics
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -60,7 +60,7 @@ pip install -e .
 python scripts/run_full_pipeline.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 quantitative-trading-strategy/
@@ -92,7 +92,7 @@ quantitative-trading-strategy/
 ```
 
 
-## 🔧 Configuration
+## Configuration
 
 The framework uses YAML configuration files for easy parameter tuning:
 
@@ -102,7 +102,7 @@ Data Parameters (`configs/data_configs.yaml`)
 
 
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -115,7 +115,7 @@ pytest --cov=src tests/
 pytest tests/test_backtesting/test_engine.py
 ```
 
-## 📊 Visualization
+## Visualization
 
 The framework generates comprehensive visualizations:
 
@@ -125,13 +125,13 @@ The framework generates comprehensive visualizations:
 - Return distribution analysis
 
 
-## 📚 References
+## References
 
 - de Prado, M. L. (2018). Advances in Financial Machine Learning. United Kingdom: Wiley.
 - Test, J., Broker, M. (2020). Machine Learning for Algorithmic Trading: Master as a PRO Applied Artificial Intelligence and Python for Predict Systematic Strategies for Options and Stocks. Learn Data-driven Finance Using Keras. Portugal: Libero Fabio Dachille.
 
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/new-feature`)
