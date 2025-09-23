@@ -5,7 +5,7 @@ ridge:
   max_iter: 1000
 
 xgboost:
-  # Optimized for ~1500 samples
+  # Optimized for ~2000 samples
   n_estimators_range: [50, 100, 150]  # Fewer trees
   max_depth_range: [2, 3, 4]  # Shallow trees to prevent overfitting
   learning_rate_range: [0.05, 0.1, 0.15]  # Higher learning rates OK for small data
@@ -20,7 +20,7 @@ xgboost:
   eval_metric: 'rmse'
 
 random_forest:
-  # Optimized for ~1500 samples
+  # Optimized for ~2000 samples
   n_estimators_range: [50, 100]  # Fewer trees
   max_depth_range: [3, 5, 7]  # Shallow to medium depth
   min_samples_split_range: [20, 50]  # High values to prevent overfitting
@@ -32,12 +32,11 @@ random_forest:
   oob_score: false  # Can enable for additional validation
 
 lightgbm:
-  # ONLY USE IF YOU HAVE >10,000 SAMPLES!
-  # For small datasets like yours, use fast_mode
+  # ONLY USE IF YOU HAVE >10,000 SAMPLES
   fast_mode: true  # Skip grid search, use good defaults
   early_stopping: false  # Not enough data for validation split
   
-  # If you must use LightGBM on small data, use these settings:
+
   n_estimators_range: [50, 100]  # Very few trees
   max_depth_range: [3, 4]  # Very shallow
   num_leaves_range: [7, 15]  # Very few leaves (must be < 2^max_depth)
@@ -54,12 +53,12 @@ lightgbm:
   
 # Recommended ensemble approach for your data size:
 ensemble:
-  # For 1500 samples, simple averaging often beats complex stacking
+  # For 2000 samples, simple averaging often beats complex stacking
   method: 'weighted_average'
   base_models: ['ridge', 'xgboost']  # Just use the two best
   weights: [0.3, 0.7]  # More weight on XGBoost
   
-# Feature engineering recommendations for small datasets:
+
 feature_engineering:
   # Reduce complexity to avoid overfitting
   lag_periods: [1, 2, 3]  # Fewer lags
@@ -71,19 +70,17 @@ feature_engineering:
   feature_selection_method: 'mutual_info'
   feature_selection_k: 30  # Select top 30 features only
 
-# MLP (Multi-Layer Perceptron) - Optimized for 1,500 samples
+# MLP (Multi-Layer Perceptron) - Optimized for 2000 samples
 mlp:
-  # FOR YOUR 1,500 SAMPLE DATASET - USE THESE SETTINGS!
   fast_mode: true  # Skip extensive grid search
   
-  # Architecture - KEEP IT TINY!
   hidden_layer_sizes: 
     - [8]           # Ultra-tiny: single layer, 8 neurons (safest)
     - [16]          # Tiny: single layer, 16 neurons
     - [8, 4]        # Two tiny layers (risky)
   
   # Heavy regularization (critical for small data)
-  alpha_range: [0.1, 1.0, 10.0]  # L2 penalty - use high values!
+  alpha_range: [0.1, 1.0, 10.0]  # L2 penalty - use high values
   
   # Activation functions
   activation: ['relu']  # relu usually best, tanh sometimes good for finance
@@ -116,10 +113,7 @@ mlp:
   # Random state
   random_state: 42
 
-
-# Alternative configurations based on data size:
-
-# If you have <1000 samples (DON'T USE MLP!)
+# < 1000 samples
 mlp_ultra_small:
   hidden_layer_sizes: [[8]]  # Single layer only
   alpha_range: [1.0, 10.0, 100.0]  # Extreme regularization
@@ -127,7 +121,7 @@ mlp_ultra_small:
   max_iter: 500
   cv_folds: 2
 
-# If you have 2000-5000 samples (MLPs become viable)
+# 1000 - 5000 samples
 mlp_small:
   hidden_layer_sizes: [[16], [32], [16, 8], [32, 16]]
   alpha_range: [0.01, 0.1, 1.0]
@@ -141,7 +135,7 @@ mlp_small:
   n_iter_no_change: 30
   cv_folds: 3
 
-# If you have 5000-10000 samples (MLPs competitive)
+# 5000 - 10,000 samples
 mlp_medium:
   hidden_layer_sizes: [[50], [100], [50, 25], [100, 50], [100, 50, 25]]
   alpha_range: [0.001, 0.01, 0.1]
@@ -156,7 +150,7 @@ mlp_medium:
   n_iter_no_change: 50
   cv_folds: 3
 
-# If you have >10000 samples (MLPs can excel)
+# > 10,000 samples
 mlp_large:
   hidden_layer_sizes: [[100], [200], [100, 50], [200, 100], [200, 100, 50]]
   alpha_range: [0.0001, 0.001, 0.01]

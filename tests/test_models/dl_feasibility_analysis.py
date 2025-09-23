@@ -224,9 +224,6 @@ def analyze_deep_learning_feasibility(n_samples=1500, n_features=115, sequence_l
         if model in ['RNN/GRU', 'LSTM', 'Transformer']:
             print(f"{status} {model:25s}: {requirement}")
     
-    print(f"\n📊 Your dataset size: {n_samples} samples")
-    print("   → Too small for standard RNN/LSTM/Transformer")
-    print("   → Might work with extreme regularization")
     
     # -------------------------
     # Practical Performance Test
@@ -271,78 +268,6 @@ def analyze_deep_learning_feasibility(n_samples=1500, n_features=115, sequence_l
     print(f"Expected LSTM RMSE:         ~{xgb_rmse * 1.5:.6f} ❌ (overfitting)")
     print(f"Expected Transformer RMSE:  ~{xgb_rmse * 2.0:.6f} ❌ (severe overfitting)")
     
-    # -------------------------
-    # Techniques That Might Help
-    # -------------------------
-    print("\n" + "="*60)
-    print("4. TECHNIQUES TO MAKE DEEP LEARNING WORK (SOMEWHAT)")
-    print("="*60)
-    
-    techniques = """
-    🔧 Architecture Modifications:
-       • Use EXTREMELY small models (<5,000 parameters)
-       • Use GRU instead of LSTM (fewer parameters)
-       • Use 1D CNN instead of RNN (often better on small data)
-       • Single layer, tiny hidden dimensions (8-16 units)
-    
-    🎯 Heavy Regularization:
-       • Dropout: 0.5-0.7 (very high)
-       • L2 weight decay: 0.01-0.1
-       • Gradient clipping
-       • Early stopping (essential)
-       • Batch normalization or layer normalization
-    
-    📊 Data Augmentation:
-       • Add Gaussian noise to inputs (σ=0.01)
-       • Time warping/shifting
-       • Mixup or CutMix adaptations
-       • Bootstrap aggregating (train multiple models)
-    
-    🔄 Training Strategies:
-       • Use ensemble of tiny models
-       • Pre-train on synthetic data
-       • Transfer learning from related tasks (if available)
-       • Multi-task learning with auxiliary objectives
-    
-    ⚡ Alternative Approaches:
-       • Hybrid models (e.g., XGBoost features → tiny LSTM)
-       • Use deep learning only for feature extraction
-       • Reservoir computing (Echo State Networks)
-       • Neural ODEs (fewer parameters)
-    """
-    
-    print(techniques)
-    
-    # -------------------------
-    # Final Verdict
-    # -------------------------
-    print("="*60)
-    print("5. FINAL VERDICT FOR YOUR 1,500 SAMPLE DATASET")
-    print("="*60)
-    
-    verdict = """
-    ❌ Standard RNN/LSTM/Transformer: Will definitely overfit
-    ⚠️  Tiny variants might work but likely won't beat XGBoost
-    ✅ 1D CNN: Best deep learning option for your data size
-    ✅ Stick with XGBoost/Ridge: Optimal for this scale
-    
-    📊 Realistic Performance Ranking (expected):
-       1. XGBoost (best)
-       2. Ridge/Lasso
-       3. Random Forest
-       4. Tiny 1D CNN (if heavily regularized)
-       5. Tiny GRU (probably overfits)
-       6. Tiny LSTM (likely overfits)
-       7. Transformer (definitely overfits)
-    
-    💡 Bottom Line:
-       • Deep learning needs AT LEAST 10,000 samples to compete
-       • With 1,500 samples, classical ML is the right choice
-       • If you must use deep learning, use a tiny 1D CNN
-       • Focus on feature engineering, not model complexity
-    """
-    
-    print(verdict)
     
     return models
 
@@ -496,7 +421,7 @@ class MinimalLSTMTrader:
 
 
 if __name__ == "__main__":
-    print("\n🧠 Deep Learning Feasibility Analysis\n")
+    print("\n Deep Learning Feasibility Analysis\n")
     
     # Run feasibility analysis
     models = analyze_deep_learning_feasibility(n_samples=1500)

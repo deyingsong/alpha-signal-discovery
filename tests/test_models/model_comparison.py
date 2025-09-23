@@ -92,7 +92,7 @@ def print_comparison_table(results):
     print("="*80)
     
     # Accuracy metrics
-    print("\n📊 Accuracy Metrics:")
+    print("\n Accuracy Metrics:")
     print("-" * 50)
     accuracy_cols = ['train_rmse', 'test_rmse', 'train_mae', 'test_mae', 'train_r2', 'test_r2']
     for col in accuracy_cols:
@@ -114,7 +114,7 @@ def print_comparison_table(results):
                 print(f"  {model:15s}: {value:.3f}")
     
     # Best model identification
-    print("\n🏆 Best Model by Metric:")
+    print("\n Best Model by Metric:")
     print("-" * 50)
     
     # Lower is better
