@@ -1,6 +1,6 @@
 # Quantitative Trading Strategy Framework
 
-A comprehensive Python framework for developing, validating, and backtesting quantitative trading strategies using machine learning techniques.
+A comprehensive Python framework for developing, validating, and backtesting quantitative trading strategies using machine learning techniques (adapted to ~2,000 samples)
 
 ## Project Overview
 
