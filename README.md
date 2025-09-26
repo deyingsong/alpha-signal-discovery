@@ -1,6 +1,6 @@
-# Quantitative Trading Strategy Framework
+# Alpha Signal Discovery
 
-A comprehensive Python framework for developing, validating, and backtesting quantitative trading strategies using machine learning techniques (adapted to ~2,000 samples)
+A comprehensive Python framework for discovering alpha signal, developing trading strategy, and managing risk in financial data, adapted to ~2,000 samples.
 
 ## Project Overview
 
