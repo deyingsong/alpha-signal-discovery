@@ -50,15 +50,13 @@ class Environment(Protocol):
 
     def immediate_value(self, x: "State", a: int) -> float:
         """
-        c_im(x, a) in the figure. This can be a reward or cost; if it is a cost,
-        return the negative of the cost to keep the optimization as argmax.
+        Immediate value
         """
         ...
 
     def actions(self, t: int, i: int) -> Iterable[int]:
         """
         Enumerate valid actions a at (t, i). Typically range(0, L+1),
-        but you can mask out invalid actions given x.
         """
         ...
 
