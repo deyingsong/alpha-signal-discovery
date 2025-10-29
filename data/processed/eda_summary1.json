@@ -1,0 +1,127 @@
+{
+  "transaction_cost": 0.005,
+  "return_stats": {
+    "Mean": -0.0001602373793678441,
+    "Median": -5.858523834897385e-06,
+    "Std Dev": 0.005923241556467911,
+    "Skewness": 0.028239565866652383,
+    "Kurtosis": 3.097437886848182,
+    "Min": -0.0191297837626551,
+    "Max": 0.0228773380231796,
+    "5% Percentile": -0.010065434971859955,
+    "95% Percentile": 0.009270856912075454,
+    "Annualized Return": -0.04037981960069672,
+    "Annualized Volatility": 0.09402854468266346,
+    "Sharpe Ratio": -0.4294421416068323
+  },
+  "signal_stats": {
+    "Mean": {
+      "momentum_factor": -0.04151898417143314,
+      "value_factor": -0.03111158438670111,
+      "volatility_factor": 4.43994876456794e-05,
+      "quality_factor": -0.009243356004771129,
+      "size_factor": 0.027753779886554617,
+      "liquidity_factor": -0.0055322785784910405,
+      "sentiment_factor": -0.07140511809730488,
+      "technical_factor": -0.04430609222204261,
+      "macro_factor": 0.00811107341536547,
+      "carry_factor": -0.07093165587066876
+    },
+    "Std": {
+      "momentum_factor": 6.9099288677914705,
+      "value_factor": 0.3190779576285691,
+      "volatility_factor": 0.10181307020188587,
+      "quality_factor": 0.14533843694215512,
+      "size_factor": 0.21374883785032328,
+      "liquidity_factor": 1.07737471766306,
+      "sentiment_factor": 0.4912666545846589,
+      "technical_factor": 0.17797953090503812,
+      "macro_factor": 0.09218087656228084,
+      "carry_factor": 0.11968268470299498
+    },
+    "Skewness": {
+      "momentum_factor": -5.42450641865699,
+      "value_factor": 2.9794378518190974,
+      "volatility_factor": 5.8580988323224235,
+      "quality_factor": -1.5249167545693492,
+      "size_factor": 0.4318246099181008,
+      "liquidity_factor": 0.04760899372468219,
+      "sentiment_factor": 0.039197303492054664,
+      "technical_factor": 0.30688397848275506,
+      "macro_factor": 1.6098843508998175,
+      "carry_factor": -2.46075086217638
+    },
+    "Kurtosis": {
+      "momentum_factor": 635.1226598543159,
+      "value_factor": 34.46729777920255,
+      "volatility_factor": 49.782979163691294,
+      "quality_factor": 13.311178696516496,
+      "size_factor": 4.5366258060304165,
+      "liquidity_factor": 3.268873850643545,
+      "sentiment_factor": 3.136676983039288,
+      "technical_factor": 3.213007254001258,
+      "macro_factor": 10.579711774889201,
+      "carry_factor": 25.163981904431903
+    },
+    "Min": {
+      "momentum_factor": -193.58965413397007,
+      "value_factor": -0.8736235829725345,
+      "volatility_factor": -0.1004315684197749,
+      "quality_factor": -1.331100760543681,
+      "size_factor": -0.8682466063470952,
+      "liquidity_factor": -3.9593311911705578,
+      "sentiment_factor": -1.3085227896304965,
+      "technical_factor": -0.5012036267571974,
+      "macro_factor": -0.1873769335453036,
+      "carry_factor": -1.4027790665998054
+    },
+    "Max": {
+      "momentum_factor": 165.90824204580906,
+      "value_factor": 3.983741782826416,
+      "volatility_factor": 1.3212007443345948,
+      "quality_factor": 0.3847272733018042,
+      "size_factor": 1.1945607943904275,
+      "liquidity_factor": 3.821641765455084,
+      "sentiment_factor": 1.7995610889646727,
+      "technical_factor": 1.0250444469431903,
+      "macro_factor": 0.775143618563796,
+      "carry_factor": 0.4994282645916778
+    },
+    "25%": {
+      "momentum_factor": -1.4634816573306078,
+      "value_factor": -0.2301659023958585,
+      "volatility_factor": -0.03702779466714905,
+      "quality_factor": -0.0695516346499856,
+      "size_factor": -0.10756639775540142,
+      "liquidity_factor": -0.7487970812336324,
+      "sentiment_factor": -0.3985738088267663,
+      "technical_factor": -0.18001131935444484,
+      "macro_factor": -0.044618440170039804,
+      "carry_factor": -0.14800935162631845
+    },
+    "75%": {
+      "momentum_factor": 1.3692576803145902,
+      "value_factor": 0.15725399160284273,
+      "volatility_factor": -0.0002485147519305,
+      "quality_factor": 0.06066054995815427,
+      "size_factor": 0.16828296882480162,
+      "liquidity_factor": 0.7492322043161366,
+      "sentiment_factor": 0.2583882189640446,
+      "technical_factor": 0.08970227088290188,
+      "macro_factor": 0.052416403259721224,
+      "carry_factor": 0.004614412212442025
+    }
+  },
+  "signal_return_correlations": {
+    "momentum_factor": 0.027247059412963015,
+    "value_factor": -0.06284847791643146,
+    "volatility_factor": 0.2133920422476822,
+    "quality_factor": -0.007506800727942934,
+    "size_factor": 0.13183637919219313,
+    "liquidity_factor": -0.0038850517564004276,
+    "sentiment_factor": -0.05442837299461541,
+    "technical_factor": 0.018347079593039318,
+    "macro_factor": 0.23147580333871148,
+    "carry_factor": -0.0654418821936074
+  }
+}
