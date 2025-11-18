@@ -1,0 +1,35 @@
+{
+  "model": "RandomForest",
+  "optimal_threshold": 0.004001935499251003,
+  "transaction_cost": 0.005,
+  "test_metrics": {
+    "total_return": -0.17905063614948513,
+    "annualized_return": -0.10459984016321233,
+    "annualized_volatility": 0.031695419432684745,
+    "sharpe_ratio": -3.300156364403481,
+    "sortino_ratio": -3.1379403866359636,
+    "max_drawdown": -0.1800345488981589,
+    "calmar_ratio": -0.580998707211369,
+    "win_rate": 0.042222222222222223,
+    "avg_win": 0.003145306112467395,
+    "avg_loss": -0.005226771369347345,
+    "profit_factor": 0.23333878725628815,
+    "num_trades": 55.0
+  },
+  "benchmark_metrics": {
+    "total_return": -0.4149823780059734,
+    "annualized_return": -0.2593472989650947,
+    "sharpe_ratio": -2.756234300856089
+  },
+  "cost_analysis": {
+    "total_costs": 0.31,
+    "num_trades": 62.0,
+    "cost_drag": 0.29863696310239785
+  },
+  "risk_metrics": {
+    "var_95": -0.005,
+    "var_99": -0.007202279824531706,
+    "cvar_95": -0.005767099375177672,
+    "cvar_99": -0.010230583608848761
+  }
+}
